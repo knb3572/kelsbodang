@@ -1,63 +1,86 @@
 <!doctype html>
 <html>
     <head>
-        <style>
-        nav{background-color:rgb(247, 217, 180)}
-        nav{padding: 1em}
-        a{color:rgb(61, 61, 121)}
-        p{color:rgb(61, 61, 121)}
-        p{font-family: 'Futura'}
-        p{font-size: 1.1em}
-        p{padding: 1em}
-        h2{color:rgb(172, 165, 73)}
-        h2{font-family: 'Impact'}
-        h2{padding: 1em}
-        h2{margin:10px}
-            #relax{background-color:rgb(247, 242, 180)}
-            #rush{background-color:rgb(247, 242, 180)}
-            #join-us{background-color:rgb(247, 242, 180)}
-            #join-us{ text-align: center}
-            #content{width:960px}
-            #content{margin: 0 auto}
-    </style>
         <meta charset="utf-8">
+    <style>
+            *{box-sizing: border-box}
+        
+        section{max-width: 100%}
+        nav{background-color:rgb(247, 217, 180);
+            padding: 1em}
+        a{color:rgb(61, 61, 121)}
+        p{color:rgb(61, 61, 121);
+            font-family: 'Futura';
+            font-size: 1.1em;
+            padding: 1em
+            }
+        div{flex: 1;}
+        img{max-width: 100%}
+        h2{color:rgb(172, 165, 73);
+            font-family: 'Impact';
+            padding: 1em;
+            margin:10px}
+            
+            #relax,#rush{background-color:rgb(247, 242, 180);
+            width:48%;
+            display:flex;
+            flex-flow: row wrap;
+            align-items: center;
+            flex: 1 0 15em;
+            margin: .5em;
+            }
+            
+            #join-us{background-color:rgb(247, 242, 180);
+                text-align: center}
+            
+            #content{max-width:960px;
+                width: 80%;
+            }
+        
+            #fullwidth{width=100%}
+    </style>
+        
         <title> Whitewater Rafting Vacations | Dry Oar Boating | Home </title>
     </head>
     <body>
         <div id="content">
-        <img src="http://brothert.net/dryoar/images/dryoarlogo.png">
-            <ul><nav>
+        <img src="http://brothert.net/dryoar/images/dryoarlogo.png" alt="dry oar logo">
+            
+            <nav>
+            <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="index.html">Rivers</a></li>
                 <li><a href="index.html">FAQ</a></li>
                 <li><a href="index.html">RatesDates</a></li>
                 <li><a href="index.html">Contact</a></li>
-            </nav></ul>
+            </ul>
+            </nav>
+            
             <figure>
-        <img src="http://brothert.net/dryoar/images/river-wide.JPG">
+        <img id="fullwidth" src="http://brothert.net/dryoar/images/river-wide.JPG" alt="panoramic river shot">
             </figure>
             <section id="relax">
                 <h2>We run Rivers to relax</h2>
         <p> We believe that there is nothing like a river trip for relaxing. That is why we subscribe to the dry oar philosophy of boating. Keeping your oars dry for us means taking time to look around and notice the beauty that surrounds the rivers we love.</p>
-            </section>
-            <figure>
-        <img src="http://brothert.net/dryoar/images/deso-boats.jpg">
+           <figure>
+        <img src="http://brothert.net/dryoar/images/deso-boats.jpg" alt="peaceful shot of a river">
             </figure>
+            </section>
             <section id="rush">
                 <h2>We run Whitewater for the Rush!</h2>
         <p>That doesn't mean we don't also like rapids. Opposites in all things after all. We believe that that tenseness that comes when you are looking down the tongue of a big string of waves makes you appreciate the calm beautiful water that always follows even more.</p>
-            </section>
             <figure>
-        <img src="http://brothert.net/dryoar/images/raft-rapid.jpg">
+        <img src="http://brothert.net/dryoar/images/raft-rapid.jpg" alt="river rapids shot">
             </figure>
+            </section>
             <section id="join-us">
                 <h2>Join Us!</h2>
                 <p>We invite you to come relax with us on one of the amazing rivers we visit. Check out our trips and let us know which one best suits you. We're waiting to hear from you!</p>
             </section>
             <footer>
-                <img src="facebook.png">
-                <img src="instagram.png">
-                <img src="twitter.png">
+                <img src="facebook.png" alt="facebook logo">
+                <img src="instagram.png" alt="instagram logo">
+                <img src="twitter.png" alt="twitter logo">
         <p>&copy; 2016 Dry Oar || Kelsey Bodhaine</p>
             </footer>
         </div>
