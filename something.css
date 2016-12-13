@@ -8,13 +8,13 @@
             font-size: 1.1em;
             padding: 1em
             }
-    div{flex: 1;}
-    img{width:100%}
-    h2{color:rgb(172, 165, 73);
+/*    div{flex: 1;}*/
+    img{max-width:100%}
+    h2, {color:rgb(172, 165, 73);
             font-family: 'Impact';
             padding: 1em;
             margin:10px}
-            
+    
     #relax,#rush{background-color:rgb(247,         242, 180);
             margin:10px;
             display:flex;
@@ -30,6 +30,7 @@
             
             #content{max-width:960px;
                 width: 80%;
+                margin: auto;
             }
             .rightcol, .leftcol {
             width:48%;
@@ -37,17 +38,16 @@
             margin: .5em;
             }
 
-     #fullwidth{width=100%
+     #fullwidth{width:100%
         }
 
-    .social{display:flex;
-            align-content: center
+    .social{align-content: center
             }
 
-    .copyright{height: 55px;
+    footer{line-height: 55px;
             display:flex;
-            align-content: flex-start
-            }
+            justify-content: space-between;
+            flex-flow:row-reverse wrap;}
 #logo{background-color:white;
     position:relative;
     width:110px;
@@ -67,6 +67,47 @@ nav{font-size: 1.2em;
     padding-left
     }
 
-nav ul{margin:0
+nav ul{margin: 0 0 0 5em;
+    }
+figure { margin: 0;}
+
+button.accordion{
+    background-color: rgb(220, 220, 232);
+    color:rgb(172, 165, 73);
+    font-family: 'Impact';
+    margin:10px;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    }
+    button.accordion.active, button.accordion:hover{
+    background-color:rgb(255, 252, 216);
+    }
+    button.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: rgb(61, 61, 121);
+    float: right;
+    margin-left: 5px;
+    }
+    button.accordion.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
     }
 
+    div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height:0;
+    overflow:hidden;
+    transition: 0.6s ease-in-out;
+    opacity:0;
+    }
+    div.panel.show {
+    display:block;
+    opacity:1;
+    max-height: 500px;
+    }
